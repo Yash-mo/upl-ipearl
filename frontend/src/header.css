@@ -1,0 +1,82 @@
+/* Header styling */
+header {
+    padding: 1rem;
+}
+
+.logo {
+    margin-bottom: 1rem;
+}
+
+.logo h3 {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    /* Adjust for different devices */
+}
+
+.search-bar {
+    margin-right: 1rem;
+    width: 40%;
+    display: flex;
+}
+
+.header-right .cart-icon {
+    display: flex;
+    /* Hide cart icon on mobile devices */
+}
+
+.header-right .btn {
+    font-size: 0.875rem;
+    /* Adjust button font size */
+    padding: 0.5rem 1rem;
+    /* Adjust button padding */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .logo {
+        margin-bottom: 0px;
+    }
+
+    header {
+        flex-direction: row;
+        height: 60px;
+        /* align-items: flex-start; */
+    }
+
+    .search-bar {
+        display: none;
+        /* Hide search bar on mobile devices */
+    }
+
+    .header-right .cart-icon {
+        display: none;
+        /* Hide cart icon on mobile devices */
+    }
+
+    .header-right {
+        flex-direction: row;
+        align-items: flex-start;
+        /* width: 100%; */
+    }
+}
+
+@media (max-width: 576px) {
+    .logo h3 {
+        font-size: 1.25rem;
+    }
+
+    .header-right .btn {
+        font-size: 0.75rem;
+        padding: 0.1rem 0.1rem;
+    }
+
+    .search-bar {
+        display: none;
+        /* Hide search bar on mobile devices */
+    }
+
+    .header-right .cart-icon {
+        display: none;
+        /* Hide cart icon on mobile devices */
+    }
+}

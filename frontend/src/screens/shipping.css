@@ -1,0 +1,41 @@
+/* Ensure that the input fields do not resize */
+.form-contrl {
+    width: 100%;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Ensure consistent spacing for input fields */
+.input-container {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+/* Ensure error message has consistent height */
+.error-message {
+    color: red;
+    font-size: 0.875rem;
+    height: 1.25rem; /* Adjust height as needed */
+    margin-top: 0.25rem;
+    display: flex;
+    align-items: center; /* Center the error text vertically */
+}
+
+/* Add consistent padding and margin for the form controls */
+.form-control, .form-select {
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+.invalid-feedback {
+    display: none; /* Hide feedback by default */
+}
+
+.form-contrl.is-invalid {
+    border-color: #dc3545;
+}
+
+.form-contrl.is-invalid + .invalid-feedback {
+    display: block;
+}

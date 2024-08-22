@@ -1,0 +1,87 @@
+-----------------------------------------------------------------------------------------------------------------            
+                                ..>>> LOGIN SCREEN <<<.. 
+-----------------------------------------------------------------------------------------------------------------
+???how to take data
+//Login screen's react page will provide data from inputs using useState funtion//
+
+???how to do validation
+//also validation of inputs included while seting into usestate function//
+//a seprate file will provide validaiton in input//
+//1 validation is for live changes on inputs//
+//1 validation is for after submit button click//
+
+???how to send login data to server
+// using api file the data will send to backend server and then get response//
+
+???backend server
+//backend server will (req.body) to get a data from frontend server//
+//again validation happens in backend//
+//using (userModel.findone) function email will find same email as requsted email//
+//server will response the data back//
+//main thing is just to confirm that requsted data was matching or not with database's data//
+-----------------------------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------------------------            
+                                ..>>> REGISTRATION SCREEN <<<.. 
+-----------------------------------------------------------------------------------------------------------------
+???how to take data
+//registration screen's react page will provide data from inputs using useState funtion//
+
+???how to send registration data to server
+// using api file the data will send to backend server and then get response//
+
+???backend server
+//backend server will (req.body) to get a data from frontend server//
+//server will response the data back in token and data//
+//main thing is just to save data in database after encrypting nessaary data//
+-----------------------------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------------------------            
+                                ..>>> HOME SCREEN <<<.. 
+-----------------------------------------------------------------------------------------------------------------
+???how to get data from data base to show in ui
+//home screen's react page will take data from backend server//
+//backend server takes product-data from database and response data with new key//
+
+???how to show product data in ui format
+//data from backend is already in ui page//
+//product data will send to (card-file) using props//
+//main thing is just to take data from (backend-mongodb) and how to render in ui page//
+-----------------------------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------------------------            
+                                ..>>> PRODUCT SCREEN <<<.. 
+-----------------------------------------------------------------------------------------------------------------
+???how to redirect to product:id page
+//home screen's card has set for link to add path (product/:id) //
+//useparams will take id form url after (product/)//
+
+???how to get id from frontend to backend
+//after that frontend api will send id to backend server //
+//a product will be find by (findbyid) from database//
+
+???how to show product data in ui format
+//data from backend is already in ui page//
+//product data will used by usestate//
+//main thing is just to take ID from url by (useparams) and send it to backend server to find product from database by taken Id//
+-----------------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------            
+                                ..>>> CARTITEM SCREEN <<<.. 
+-----------------------------------------------------------------------------------------------------------------
+???how to get cart item details
+// on click of addtocart button (id & qty) will goto localstorage//
+//get (id & qty) from localstorage to app.js//
+//get (id & qty) from app.js to cartscreen using props//
+
+???how to send data to backend server
+//get id from props using (map)//   
+//and post to backend server//
+//get (id as product) and match to database _id to get all product things//
+//whole product from database returned to frontend//
+//qty changes made according conditions//
+//main thing is just to take (id & qty) from prop and send it to database to find same product and get back//
+-----------------------------------------------------------------------------------------------------------------
