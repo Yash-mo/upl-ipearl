@@ -13,9 +13,17 @@ dotenv.config({ path: './config/config.env' })
 
 
 const app = express()
+app.use(cors(
+    {
+     origin:[],
+     methods:["POST","GET"],
+     credentials:true
+    }
+    ));
 ConnectDb()
 
 app.use(express.json())
+mongoose.connect('mongodb+srv://omamu65:Zarnamodi3002@cluster0.d4wqb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 app.use(express.urlencoded({ extended: true }))
 app.use(cors())
 
