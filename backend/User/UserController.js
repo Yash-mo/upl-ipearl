@@ -32,7 +32,7 @@ class UserController {
                 // delete the old result.passsword 
                 delete result.password
                 // create a token of result data
-                const token = Jwt.sign(result, process.env.JWT_SECRATE, { expiresIn: "20d" })
+                const token = Jwt.sign(result, "yashmodi", { expiresIn: "20d" })
 
             result = {
                 firstName: result.firstName,
@@ -70,7 +70,7 @@ class UserController {
             // delete old normal password
             delete user.password
 
-            const token = Jwt.sign(user, process.env.JWT_SECRATE, { expiresIn: "20d" })
+            const token = Jwt.sign(user, "yashmodi", { expiresIn: "20d" })
             if (!token) {
                 return res.status(500).send({ message: "somrthing is worng" })
             }
