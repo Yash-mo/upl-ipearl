@@ -11,14 +11,14 @@ import Cartscreen from './screens/Cartscreen';
 import Shippingscreen from './screens/ShippingScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import ProtectedRoute from './comn/ProtectedRoute';
-import 'axios';
+// import 'axios'
 
 function App() {
 
   const [userInfo, setUserInfo] = useState(JSON.parse(localStorage.getItem('userInfo') || '{}'))
   const [token, settoken] = useState(localStorage.getItem('token') || '')
   const [cartItems, setcartItems] = useState(JSON.parse(localStorage.getItem("cartItems") || "[]"))
-  axios.post('https://upl-ipearl-api.vercel.app/')
+  // axios.post('https://upl-ipearl-api.vercel.app/')
   return (
     <BrowserRouter>
       <div className="App">
