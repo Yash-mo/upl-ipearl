@@ -49,6 +49,7 @@ class UserController {
     }
 
     async userRegister(req, res) {
+        console.log("signup - api reached cotnroller")
         try {
             // get data from thunderclient using req.body
             const { firstName, lastName, email, password } = req.body
@@ -61,6 +62,8 @@ class UserController {
 
             // a new data created as usermodel form in mongodb using create function
             let user = await userModel.create(req.body)
+
+            console.log(user);
             if (!user) return res.status(500).send({ message: "something went wrong" })
             //get data from monogodb, mongodb returnes to many files to avoid that ._doc is nessesary
             user = user._doc
