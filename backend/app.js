@@ -25,7 +25,7 @@ ConnectDb()
 app.use(express.json())
 // mongoose.connect('mongodb+srv://omamu65:Zarnamodi3002@cluster0.d4wqb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 app.use(express.urlencoded({ extended: true }))
-app.use(cors())
+app.use(cors());
 
 
 
