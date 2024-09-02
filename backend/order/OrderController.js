@@ -1,5 +1,7 @@
 const orderModel = require("./OrderModel")
 const { instance } = require('../razorpay/razorpayInstance.js')
+const Razorpay = require('razorpay')
+
 class OrderController {
     async createOrder(req, res) {
         try {
@@ -30,10 +32,8 @@ class OrderController {
                 deliverdIn: deliveryDate,
                 totalPrice
             }
-
             let orderdone = await orderModel.create(orderDetails)
             orderdone = { ...orderdone._doc, RazorpayDetails: null }
-
             if (paymentMethod === "cod") {
                 if (!orderdone) return res.status(500).send({ message: "something went wrong" })
                 return res.status(200).send({ message: "success", orderdone })
@@ -46,15 +46,20 @@ class OrderController {
                     currency: "USD",
                     receipt: "rcpt_id_" + orderdone._id
                 }
+                
                 const Razorpayresult = await instance.orders.create(options)
+                
+                // console.log(Razorpayresult)
                 
                 if (!Razorpayresult) {
                     return res.status(500).send({ message: "something went wrong" })
                 }
                 orderdone = {
-                    ...orderdone, RazorpayDetails: { ...Razorpayresult, apikey: process.env.RAZORPAY_API_KEY }
+                    ...orderdone, RazorpayDetails: { ...Razorpayresult, apikey: "rzp_test_UaCwo8g8zgeK1J" }
                 }
-
+                console.log("1")
+                console.log(process.env.RAZORPAY_API_KEY)
+                // console.log(orderdone)
                 return res.status(200).send({ message: "success", orderdone })
 
             }

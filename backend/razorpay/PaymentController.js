@@ -25,20 +25,22 @@ class paymentcontroller {
     }
 
     async Paymentverify(req, res) {
+        console.log("1")
         const { razorpay_payment_id, orderId, razorpayOrderId, signature } = req.body
         console.log(req.body)
-
+        
         // no need for this instance 
         // var instance = new Razorpay({ key_id: process.env.RAZORPAY_API_KEY, key_secret: process.env.RAZORPAY_API_SECRET })
-
+        
         const secret = process.env.RAZORPAY_API_SECRET
-
-
+        console.log("2")
+        
+        
         var { validatePaymentVerification, validateWebhookSignature } = require('razorpay/dist/utils/razorpay-utils');
-
+        
         const isvalid = validatePaymentVerification({ "order_id": razorpayOrderId, "payment_id": razorpay_payment_id }, signature, secret);
         console.log(isvalid)
-
+        
         
         if (isvalid) {
             const dbreceipt = await receipt.create(req.body)

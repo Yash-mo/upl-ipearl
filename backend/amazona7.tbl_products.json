@@ -1,0 +1,105 @@
+[{
+  "_id": {
+    "$oid": "66a3328fe721787fdcadf342"
+  },
+  "brand": "apple",
+  "name": "iPhone 12pro",
+  "des": "best price",
+  "image": "https://www.neolight.in/wp-content/uploads/2022/01/iphone-12-pro-silver.jpg",
+  "ratings": "6",
+  "price": "280",
+  "discount": "28",
+  "dis": "10%",
+  "stocks": 40,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66a33367e721787fdcadf34a"
+  },
+  "brand": "apple",
+  "name": "iPhone 12pro max",
+  "des": "best price",
+  "image": "https://www.neolight.in/wp-content/uploads/2022/01/iphone-12-pro-max-blue.jpg",
+  "ratings": "6",
+  "price": "300",
+  "discount": "30",
+  "dis": "10%",
+  "stocks": 40,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66a333e5e721787fdcadf34e"
+  },
+  "brand": "apple",
+  "name": "iPhone 13pro max",
+  "des": "best price",
+  "image": "https://www.neolight.in/wp-content/uploads/2022/01/iphone-13-pro-max-blue.jpg",
+  "ratings": "6",
+  "price": "400",
+  "discount": "40",
+  "dis": "10%",
+  "stocks": 40,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66a33468e721787fdcadf356"
+  },
+  "brand": "apple",
+  "name": "iPhone 14",
+  "des": "best price",
+  "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-14-finish-select-202209-6-1inch-product-red?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=bjlYUjk1NXN2Uy9CTWFMaXBneUF0bEthL1VsNXgveGUwQ1JqNzA0ZHAra29qbHo3SmYvbWNSaVZoOHd1YUswbjFHN0J1cFhnbVRLZGNTN2JhbjJDZkNRRkZPbEhXZEdXTXlCZG9FcEUwK0xpODVXNlVLaW5vN25NWVN4TFkySkpkOXduYWJsak5sSWcwcFUwaDAyaTlnPT0=&traceId=1",
+  "ratings": "6",
+  "price": "400",
+  "discount": "40",
+  "dis": "10%",
+  "stocks": 40,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66a33529e721787fdcadf35e"
+  },
+  "brand": "apple",
+  "name": "iPhone 15",
+  "des": "best price",
+  "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-green?wid=5120&hei=2880&fmt=webp&qlt=70&.v=cHJOTXEwTU92OEtKVDV2cVB1R2FTSjlERndlRTljaUdZeHJGM3dlLzR2OVN1RVI4NjBlOTAxZFZncWlrRCtEV09MekhWSGZtV1pvV240QzNuTk80VXhseHVZcEw1SmhqcElaQkJMTm9FMzhTOVdVSFMvNkcyTDFvZWFCZUtsU3g=&traceId=1",
+  "ratings": "6",
+  "price": "400",
+  "discount": "40",
+  "dis": "10%",
+  "stocks": 40,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66a3357be721787fdcadf364"
+  },
+  "brand": "apple",
+  "name": "iPhone 15pro max",
+  "des": "best price",
+  "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-7inch-bluetitanium?wid=5120&hei=2880&fmt=webp&qlt=70&.v=VW44dkRidm5wazhwcGxtL0cyaEJ2VTkrNXBUdUJSK1k4NE5seUtJaW80Y0hGc1VYcU5MZG1Wc3p5djdGRkpkOXB3azBNWWRMTTJUR1Y1SkFQMTJmY3dDb1F2RTNvUEVHRkpGaGtOSVFHak1BVzRkYUlmdElTYk5KZFpJVWpSSnc2aGt6UEZqaHowVCs2N3RYMnYySnhRPT0=&traceId=1",
+  "ratings": "6",
+  "price": "700",
+  "discount": "40",
+  "dis": "10%",
+  "stocks": 40,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66a335e5e721787fdcadf368"
+  },
+  "brand": "apple",
+  "name": "iPhone 13",
+  "des": "best price",
+  "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-13-finish-unselect-gallery-2-202207?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=WGQwVDZoTWdLODlMWERUbVY5M013dFgrSXpWVEhWaW9YTGlWRHFoSHU0OEZzSnVITG1JRUQvRFNkdFZtK2RYVGd2S3NaRzcrU0dmYjNHTUFiMnlsWGEwekI5ZWpRa0o2WWdVYzdzTUdBdFZOS0lzSmhuYUZValowZ1AwRFBQazE=&traceId=1",
+  "ratings": "6",
+  "price": "700",
+  "discount": "40",
+  "dis": "10%",
+  "stocks": 40,
+  "__v": 0
+}]
