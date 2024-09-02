@@ -3,20 +3,19 @@ import apiHelper from "./ApiHelper"
 const LoadRazorPay = () => {
 
     return new Promise((resolve) => {
-        const scrpit = document.createElement("script")
-        scrpit.src = 'https://checkout.razorpay.com/v1/checkout.js'
-        scrpit.async = true
-        scrpit.onload = () => {
+        const script = document.createElement("script")
+        script.src = 'https://checkout.razorpay.com/v1/checkout.js'
+        script.async = true
+        script.onload = () => {
             resolve(window.Razorpay)
         }
-        document.body.appendChild(scrpit)
+        document.body.appendChild(script)        
     })
 }
 
 const HandlePayment = async (paymentOptions) => {
-    console.log(paymentOptions);
     const razorpay = await LoadRazorPay()
-
+    console.log(paymentOptions)
     const options = {
         key: paymentOptions.apikey,
         amount: paymentOptions.amount,
@@ -24,10 +23,12 @@ const HandlePayment = async (paymentOptions) => {
         name: paymentOptions.name,
         description: 'Test Payment',
         order_id: paymentOptions.razorpayOrderId,
+       
         handler: async function (response) {
+            console.log("here")
             const { razorpay_payment_id, razorpay_signature, razorpay_order_id } = response
-
-
+            
+            
             if (response && response.razorpay_payment_id) {
                 try {
                     const result = await apiHelper.PaymentVerify({ razorpay_payment_id: razorpay_payment_id, orderId: paymentOptions.orderId, razorpayOrderId: razorpay_order_id, signature: razorpay_signature })
@@ -43,9 +44,11 @@ const HandlePayment = async (paymentOptions) => {
                 } catch (error) {
                     console.log(error);
                     if (error && error.response && error.response.data && error.response.data.message) {
-                        paymentOptions.showError(error)
+                        paymentOptions.showError(error.response.data.message)
+                    } else {
+                        paymentOptions.showError("An unexpected error occurred during payment verification.")
                     }
-                }
+                }                
             } else {
                 return alert("something wrong with payment")
             }

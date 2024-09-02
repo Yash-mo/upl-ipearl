@@ -89,9 +89,9 @@ export default function PlaceOrderScreen({ cartItems, setcartItems }) {
     const PlaceorderHendler = async () => {
         try {
             const userInfo = JSON.parse(localStorage.getItem("userInfo") || "[]")
-
+            
             const paymentMethod = payment && payment === "online" ? "online" : "cod"
-
+            
             const products = cart.map(({ _id, qty, price }) => ({ _id, qty, price }))
             const orderDetails = {
                 user: userInfo,
@@ -101,22 +101,21 @@ export default function PlaceOrderScreen({ cartItems, setcartItems }) {
                 totalPrice: summarydetails.totalAmount
             }
             const result = await apiHelper.Placeorder(orderDetails)
-
+            
             if (!result) {
                 alert("ORDER NOT PLACED")
             }
-
+            
             // setcart('')
-
             if (!result.data.orderdone.RazorpayDetails) {
                 alert('ORDER SUCCESSFULL')
                 localStorage.removeItem('cartItems')
                 setcartItems('')
                 return navigate('/product');
-
+                
             } else {
                 const onlinepay = result.data.orderdone
-
+                console.log(onlinepay)
                 const Options = {
                     name: onlinepay.shippingAddress.fullName,
                     phone: onlinepay.shippingAddress.phonenumber,

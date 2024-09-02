@@ -2,8 +2,8 @@ import axios from "axios"
 
 class ApiHelper {
     constructor() {
-        // this.baseUrl = "http://localhost:5000"
-        this.baseUrl = "https://upl-ipearl-git-master-yashs-projects-34ce0a50.vercel.app"
+        this.baseUrl = "http://localhost:5000"
+        // this.baseUrl = "https://upl-ipearl-git-master-yashs-projects-34ce0a50.vercel.app"
     }
 
     fetchproducts() {
@@ -25,6 +25,7 @@ class ApiHelper {
         return axios.post(`${this.baseUrl}/payment`, orderDetails)
     }
     PaymentVerify(paymentids) {
+        console.log("paymentids")
         return axios.post(`${this.baseUrl}/razorpay/paymentverification`, paymentids)
     }
 }
