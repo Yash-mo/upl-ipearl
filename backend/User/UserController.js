@@ -49,19 +49,20 @@ class UserController {
     }
 
     async userRegister(req, res) {
-        console.log("signup - api reached cotnroller")
         try {
             // get data from thunderclient using req.body
             const { firstName, lastName, email, password } = req.body
-
+            
             // incrypt password using bcrypt 
             const enPassword = bcrypt.hashSync(password, 8)
             if (!enPassword) return res.status(500).send({ message: "something went wrong" })
-            // old requsted password changed into enpassword
+                // old requsted password changed into enpassword
             req.body.password = enPassword
-
+            
             // a new data created as usermodel form in mongodb using create function
+            console.log("we are here")
             let user = await userModel.create(req.body)
+            console.log(user)
 
             console.log(user);
             if (!user) return res.status(500).send({ message: "something went wrong" })

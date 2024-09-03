@@ -32,7 +32,7 @@ class paymentcontroller {
         // no need for this instance 
         // var instance = new Razorpay({ key_id: process.env.RAZORPAY_API_KEY, key_secret: process.env.RAZORPAY_API_SECRET })
         
-        const secret = process.env.RAZORPAY_API_SECRET
+        const secret = instance.key_secret
         console.log("2")
         
         
