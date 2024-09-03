@@ -16,6 +16,7 @@ class ApiHelper {
         return axios.post(`${this.baseUrl}/user/login`, LoginDetails)
     }
     userRegister(registerDetails) {
+        console.log(registerDetails)
         return axios.post(`${this.baseUrl}/user/register`, registerDetails)
     }
     fetchcart(product) {

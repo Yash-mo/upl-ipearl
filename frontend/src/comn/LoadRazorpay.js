@@ -31,7 +31,9 @@ const HandlePayment = async (paymentOptions) => {
             
             if (response && response.razorpay_payment_id) {
                 try {
+                    console.log("paymentverify")
                     const result = await apiHelper.PaymentVerify({ razorpay_payment_id: razorpay_payment_id, orderId: paymentOptions.orderId, razorpayOrderId: razorpay_order_id, signature: razorpay_signature })
+                    console.log(result)
                     if (result && result.status === 200) {
 
                         alert("Save This Refrence No.: " + result.data.RefrenceNo);
